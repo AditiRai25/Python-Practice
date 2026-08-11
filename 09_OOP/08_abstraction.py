@@ -1,0 +1,19 @@
+# Demonstrate abstraction using an abstract class
+
+from abc import ABC, abstractmethod
+
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+
+class Car(Vehicle):
+    def start(self):
+        print("Car starts with a key.")
+
+
+car = Car()
+car.start()
